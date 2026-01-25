@@ -1,5 +1,127 @@
-body {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .Hero-Text {background-color: rgba(226, 178, 178, 0.8); color: rgb(249, 255, 255);}
+}
+
+@media only screen and (min-width: 600px) {
+  .About-Me-text, .Game-Memory, .last-panel-text { color: rgb(249, 255, 255);}
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Hero-Text {background-color: rgb(226, 178, 178); color: rgb(47, 56, 79);}
+}
+
+@media only screen and (max-width: 600px) {
+  .About-Me-text, .Game-Memory, .last-panel-text { color: rgb(47, 56, 79);}
+}
+
+  body {
+    background-color: rgb(210, 220, 241);
+  }
+
+body,html {
     padding: 0;
     margin: 0;
-    background-image: url("imgs/Hero-Image-SunsetM.jpg");
+    height: 100%;
 }
+
+.Hero-Text {
+    font-size: 130%;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 25px;
+    padding: 30px;
+    transform: translate(-5%, -10%);
+}
+
+.parallax {
+ /*I pulled this code from W3 Schools, but I did play around with the 
+ parallax effect to understand what each line does*/
+
+  /* The image used */
+  background-image: url("imgs/Hero-Image-Sunset.jpg");
+
+    /* Full height (viewport) used W3 and copilot to help me out here */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*I was having an issue with the About-Me and Game-Memory sections
+ not displaying correctly. I went to the internet first to try and
+ understand why the Divs were displaying on top of one another, but
+ to no avail I could not figure it out. I used CSS chat to help me
+ here. */
+
+.About-Me {
+    background-color: rgb(238, 216, 213);
+    padding: 90px 40px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+.About-Me-text {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color:  rgba(226, 178, 178, 0.8);
+    border-radius: 25px;
+    padding: 160px 40px;
+}
+
+.Game-Memory-BG {
+  /* The image used */
+  background-image: url("imgs/Hero-Image-SunsetM.jpg");
+  opacity: 0.8;
+    /* Full height (viewport) used W3 and copilot to help me out here */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Game-Memory {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15%;
+    background-color:  rgba(172, 183, 199, 0.548);
+    border-radius: 25px;
+    padding: 120px 40px;
+    transform: translate(0%, 35%);
+}
+
+.last-panel {
+    background-color:  rgba(197, 217, 243, 0.8);
+    padding: 170px 40px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: static;
+}
+
+.last-panel-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(175, 194, 214);
+    border-radius: 25px;
+    padding: 120px 40px;
+}
+
