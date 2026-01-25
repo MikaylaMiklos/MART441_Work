@@ -82,10 +82,10 @@ body,html {
 }
 
 .Game-Memory-BG {
-  /* The image used */
+  /* The image used used W3 to help me out here*/
   background-image: url("imgs/Hero-Image-SunsetM.jpg");
   opacity: 0.8;
-    /* Full height (viewport) used W3 and copilot to help me out here */
+  
   height: 100%;
 
   /* Create the parallax scrolling effect */
