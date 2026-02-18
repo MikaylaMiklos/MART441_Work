@@ -1,0 +1,1 @@
+I had a really busy week so I wasn't able to get to this assiggnment in time. However I was able to make some code and prompt AI. It's a little frustrating to see that GenAI can complete this assignment in seconds while I struggle with it. I still think I have more creative control over my work, but AI definitly has me beat when it comes to creating code.
