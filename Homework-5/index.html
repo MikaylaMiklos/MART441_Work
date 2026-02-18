@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adventure Story</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script>
+    // choice 1
+    function choice1() {
+      var userInput = document.getElementById("userInput").value;
+      var Prompt = document.getElementById("storyPrompt");
+      if (userInput === "dagger") {
+        document.getElementById("userInput").style.display = "none";
+        document.getElementById("submitBtn").style.display = "none";
+
+        document.getElementById("userInput2").style.display = "block";
+        document.getElementById("submitBtn2").style.display = "block";
+
+        Prompt.innerHTML = "You examine the Silver Ornamental Dagger. You get a bad feeling from the dagger, but you can't put your finger on it and shrug it off. You take both the dagger and mirror You must now decide whether to go up the stairs or down the stairs.";
+      } 
+      else if (userInput === "mirror") {
+        document.getElementById("userInput").style.display = "none";
+        document.getElementById("submitBtn").style.display = "none";
+
+        document.getElementById("userInput2").style.display = "block";
+        document.getElementById("submitBtn2").style.display = "block";
+
+        Prompt.innerHTML = "You pick up the Small Golden Mirror and look into it. You see a reflection of yourself, but it is distorted. You feel get a sense of satisfaction, you take both the dagger and mirror. You must now decide whether to go up the stairs or down the stairs.";
+      } 
+      else {
+        Prompt.innerHTML = "Invalid input. Please type 'dagger' or 'mirror' to choose.";
+
+      }
+    }
+
+    // choice 2
+    function choice2() {
+      var answer = document.getElementById("userInput2").value;
+      var Prompt = document.getElementById("storyPrompt");
+      if (answer === "up") {
+        document.getElementById("userInput2").style.display = "none";
+        document.getElementById("submitBtn2").style.display = "none";
+
+        document.getElementById("userInput3").style.display = "block";
+        document.getElementById("submitBtn3").style.display = "block";
+
+        document.getElementById("Image").src = "spirit.jpg";
+        Prompt.innerHTML = "As you head up the stairs, you start to feel lighter and a little more at ease. At a landing, you come across a figure it doesn't talk to you. do you talk to it or ignore it?";
+      } 
+      else if (answer === "down") {
+        document.getElementById("userInput2").style.display = "none";
+        document.getElementById("submitBtn2").style.display = "none";
+
+        document.getElementById("userInput3").style.display = "block";
+        document.getElementById("submitBtn3").style.display = "block";
+
+        document.getElementById("Image").src = "spirit.jpg";
+        Prompt.innerHTML = "As you head down the stairs, you start to feel heavier and a little more anxious. At a landing, you come across a figure it doesn't talk to you. do you talk to it or ignore it?";
+      } 
+      else {
+        Prompt.innerHTML = "Invalid input. Please type 'up' or 'down' to choose.";
+      }
+    }
+
+    // choice 3
+    function choice3() {
+      var answer = document.getElementById("userInput3").value;
+      var Prompt = document.getElementById("storyPrompt");
+      if (answer === "talk") {
+        document.getElementById("userInput3").style.display = "none";
+        document.getElementById("submitBtn3").style.display = "none";
+
+        document.getElementById("userInput4").style.display = "block";
+        document.getElementById("submitBtn4").style.display = "block";
+
+        Prompt.innerHTML = "You decide to talk to the figure. It tells you that it is a guardian of the staircase and that you must give it a gift to continue. Do you give it the Silver Ornamental Dagger or the Small Golden Mirror?";
+      } else if (answer === "ignore") {
+        document.getElementById("userInput3").style.display = "none";
+        document.getElementById("submitBtn3").style.display = "none";
+
+        document.getElementById("userInput5").style.display = "block";
+        document.getElementById("submitBtn5").style.display = "block";
+
+        Prompt.innerHTML = "You decide to ignore the figure and continue on your way. As you walk past it, it suddenly grabs you and throws you down the stairs. You fall for what feels like an eternity before hitting the bottom. You are now trapped in a dark and eerie basement.";
+      } 
+      else {
+        Prompt.innerHTML = "Invalid input. Please type 'talk' or 'ignore' to choose.";
+      }
+    }
+
+    // choice 4 (talk to the figure)
+    function choice4() {
+      var answer = document.getElementById("userInput4").value;
+      var Prompt = document.getElementById("storyPrompt");
+      if (answer === "silver dagger") {
+        document.getElementById("userInput4").style.display = "none";
+        document.getElementById("submitBtn4").style.display = "none";
+
+        document.getElementById("userInput5").style.display = "block";
+        document.getElementById("submitBtn5").style.display = "block";
+        Prompt.innerHTML = "You give the figure the Silver Ornamental Dagger. The figure takes the dagger and examines it. It then looks at you and says, 'This beautiful dagger, It symbolizes everything that you feel is wrong with yourself. You mat get a bad feeling from it, but there is beauty in our flaws.";
+      } else if (answer === "golden mirror") {
+        document.getElementById("userInput4").style.display = "none";
+        document.getElementById("submitBtn4").style.display = "none";
+
+        document.getElementById("userInput5").style.display = "block";
+        document.getElementById("submitBtn5").style.display = "block";
+        Prompt.innerHTML = "You give the figure the Small Golden Mirror. The figure takes the mirror and examines it. It then looks at you and says, this mirror shows you the best version of yourself. It shows you what you want to see, but it is not always the truth.";
+      }
+      else {
+        Prompt.innerHTML = "Invalid input. Please type 'silver dagger' or 'golden mirror' to choose.";
+      }
+    }
+    //restart function
+    function restart() {
+        document.getElementById("userInput").style.display = "block";
+        document.getElementById("submitBtn").style.display = "block";
+
+        document.getElementById("userInput2").style.display = "none";
+        document.getElementById("submitBtn2").style.display = "none";
+        
+        document.getElementById("userInput3").style.display = "none";
+        document.getElementById("submitBtn3").style.display = "none";
+        
+        document.getElementById("userInput4").style.display = "none";
+        document.getElementById("submitBtn4").style.display = "none";
+        
+        document.getElementById("userInput5").style.display = "none";
+        document.getElementById("submitBtn5").style.display = "none";
+
+        document.getElementById("storyPrompt").innerHTML = "Unsure of how you got here, you look around and take in the environment. You stand in a cramped marble stairwell. There are big lancet windows that shine light upon a box on the stairwell. Inside the box you see a Silver Ornamental Dagger and a Small Golden Mirror."; 
+        document.getElementById("userInput").value = "Type dagger or mirror here to choose..."; }
+    
+
+      function choice5() { 
+      var answer = document.getElementById("userInput5").value;
+      if (answer === "restart") {
+        restart();
+      } 
+      else { 
+        document.getElementById("storyPrompt").innerHTML = "Type 'restart' to play again."; } }
+
+  </script>
+
+  <body>
+    <div class="Adventure">
+      <h1>Spiral Staircase</h1><br>
+
+
+              <img src="silver.jpg" id="Image" width="75px" height="75px">
+      <div id="storyPrompt">
+      <p>Unsure of how you got here, you look around and take in the environment, You stand in a cramped marble stairwell. There are big lancet windows that shine light upon a box on the stairwell. Inside the box you see a Silver Ornamental Dagger and a Small Golden Mirror. </p><br>
+      </div>
+
+      <input type="text" size="32" id="userInput" value="Type dagger or mirror here to choose..." />
+      <button id="submitBtn" onclick="choice1()" >Submit</button>
+
+      <input type="text" size="32" id="userInput2" style="display: none;" value="Type up or down here to choose..." />
+      <button id="submitBtn2" onclick="choice2()" style="display: none;"  >Submit</button>
+
+      <input type="text" size="32" id="userInput3" style="display: none;" value="Type talk or ignore here to choose..." />
+      <button id="submitBtn3" onclick="choice3()" style="display: none;"  >Submit</button>
+
+      <input type="text" size="32" id="userInput4" style="display: none;" value="Type silver dagger or golden mirror here to choose..." />
+      <button id="submitBtn4" onclick="choice4()" style="display: none;"  >Submit</button>
+
+      <input type="text" size="32" id="userInput5" style="display: none;" value="restart" />
+      <button id="submitBtn5" onclick="choice5()" style="display: none;">restart</button>
+
+
+    </div>
+
+  </body>
+</html>

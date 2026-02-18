@@ -25,10 +25,13 @@
     <title>My 441 Site</title>
   </head>
   <body>
+    <label id="lblName">Your Name Goes Here</label><br>
+    <input id="txtName" type="text"><br>
+    <button id="btnSubmit">Submit</button><br>
 
     <h1>Mikaylas 441 Homework Site</h1>
 
-    <p>This site contains my work for MART 441.</p>
+    <p>This site contains my work for MART 441. I will also practice my web design skills in this directory.</p>
 
 
     <h2>About Me</h2>
@@ -50,5 +53,18 @@
         <a href="https://www.pinterest.com/">Click here</a>
     </p>    
     
+    <script>
+      var currentText =
+        document.getElementById("lblName").innerHTML;
+
+      // To see what is stored in the label, you have two options:
+
+      // Option 1: Print to the console
+      console.log(currentText);
+
+      // Option 2: Show an alert
+      window.alert(currentText);
+    </script>
+
   </body>
 </html>

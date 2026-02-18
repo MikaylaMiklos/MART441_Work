@@ -1,0 +1,21 @@
+body {
+    background: url(imgs/Triple-Spiral-Stairs.jpg);
+    background-size: cover;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.Adventure {
+    text-align: center;
+    color: rgb(51, 55, 61);
+    background-color: rgba(171, 187, 207, 0.897);
+    padding: 90px 40px;
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+ input, button {
+    background-color: rgb(69, 108, 180);
+    color: white;
+}
+

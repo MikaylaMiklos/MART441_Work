@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef;
+            text-align: center;
+            padding: 20px;
+        }
+        #storyBox {
+            border: 2px solid #333;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            background-color: white;
+            min-height: 150px;
+        }
+        #storyImage {
+            width: 300px;
+            height: 200px;
+            margin-top: 20px;
+            border: 2px solid #444;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Choose Your Adventure</h1>
+
+<div id="storyBox">Welcome traveler. Type "start" to begin your journey.</div>
+<img id="storyImage" src="" alt="">
+
+<br><br>
+
+<input type="text" id="userInput" placeholder="Type your choice here">
+<button onclick="processInput()">Submit</button>
+
+<script>
+let gameActive = true;
+
+// Main function that processes user input
+function processInput() {
+    if (!gameActive) return;
+
+    let choice = document.getElementById("userInput").value.toLowerCase();
+    document.getElementById("userInput").value = "";
+
+    handleChoice(choice);
+}
+
+// Function that updates the story text and image
+function updateStory(text, img = "") {
+    document.getElementById("storyBox").innerText = text;
+    document.getElementById("storyImage").src = img;
+}
+
+// Function that returns a random message (demonstrates return values)
+function randomWarning() {
+    let warnings = [
+        "A cold wind blows...",
+        "You hear distant footsteps...",
+        "Something feels off...",
+        "The trees whisper your name..."
+    ];
+
+    let index = Math.floor(Math.random() * warnings.length);
+    return warnings[index];
+}
+
+// Main decision handler
+function handleChoice(choice) {
+    switch (choice) {
+        case "start":
+            updateStory(
+                "You stand at the entrance of a dark forest. Do you go LEFT, RIGHT, or FORWARD?",
+                "https://picsum.photos/id/102/300/200"
+            );
+            break;
+
+        case "left":
+            updateStory(
+                "You walk left and discover an abandoned cabin. Do you ENTER or KEEP WALKING?",
+                "https://picsum.photos/id/106/300/200"
+            );
+            break;
+
+        case "enter":
+            updateStory(
+                "Inside the cabin you find a glowing chest. Do you OPEN it or LEAVE it alone?",
+                "https://picsum.photos/id/1080/300/200"
+            );
+            break;
+
+        case "open":
+            updateStory(
+                "The chest bursts open and reveals treasure! You win! Type RESTART to play again.",
+                "https://picsum.photos/id/1040/300/200"
+            );
+            gameActive = false;
+            break;
+
+        case "keep walking":
+            updateStory(
+                "You keep walking and get lost. " + randomWarning() + " Type RESTART to try again.",
+                "https://picsum.photos/id/103/300/200"
+            );
+            gameActive = false;
+            break;
+
+        case "right":
+            updateStory(
+                "You head right and encounter a river. Do you SWIM or BUILD a raft?",
+                "https://picsum.photos/id/1056/300/200"
+            );
+            break;
+
+        case "swim":
+            updateStory(
+                "You try to swim but the current is too strong. You wash ashore somewhere unknown. Type RESTART.",
+                "https://picsum.photos/id/1011/300/200"
+            );
+            gameActive = false;
+            break;
+
+        case "build":
+            updateStory(
+                "You build a raft using fallen branches. After hours of work, you set sail. You survive! Type RESTART.",
+                "https://picsum.photos/id/1003/300/200"
+            );
+            gameActive = false;
+            break;
+
+        case "forward":
+            forwardPath();
+            break;
+
+        case "restart":
+            restartGame();
+            break;
+
+        default:
+            updateStory("I didn't understand that. Try again.");
+    }
+}
+
+// Demonstrates a loop
+function forwardPath() {
+    let steps = "";
+    for (let i = 1; i <= 5; i++) {
+        steps += "You take step " + i + " into the forest...\n";
+    }
+
+    updateStory(
+        steps + "\nA mysterious figure appears. Do you TALK or RUN?",
+        "https://picsum.photos/id/237/300/200"
+    );
+}
+
+function restartGame() {
+    gameActive = true;
+    updateStory("Welcome back traveler. Type START to begin again.");
+    document.getElementById("storyImage").src = "";
+}
+</script>
+
+</body>
+</html>
+ 
