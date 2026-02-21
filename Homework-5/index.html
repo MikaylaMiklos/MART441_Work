@@ -35,17 +35,21 @@
     }
 
     // choice 2
+
     function choice2() {
       var answer = document.getElementById("userInput2").value;
       var Prompt = document.getElementById("storyPrompt");
+      //change title with parameters
+      var currentTitle = document.getElementById("getTitle").innerHTML;
+      document.getElementById("getTitle").innerHTML = currentTitle + "<Br>Who is this?";
+      
+      document.getElementById("Image").src = "spirit.jpg";
       if (answer === "up") {
         document.getElementById("userInput2").style.display = "none";
         document.getElementById("submitBtn2").style.display = "none";
 
         document.getElementById("userInput3").style.display = "block";
         document.getElementById("submitBtn3").style.display = "block";
-
-        document.getElementById("Image").src = "spirit.jpg";
         Prompt.innerHTML = "As you head up the stairs, you start to feel lighter and a little more at ease. At a landing, you come across a figure it doesn't talk to you. do you talk to it or ignore it?";
       } 
       else if (answer === "down") {
@@ -62,11 +66,14 @@
         Prompt.innerHTML = "Invalid input. Please type 'up' or 'down' to choose.";
       }
     }
+    
 
     // choice 3
     function choice3() {
       var answer = document.getElementById("userInput3").value;
       var Prompt = document.getElementById("storyPrompt");
+      document.getElementById("getTitle").innerHTML = "Spiral Staircase";
+
       if (answer === "talk") {
         document.getElementById("userInput3").style.display = "none";
         document.getElementById("submitBtn3").style.display = "none";
@@ -75,6 +82,13 @@
         document.getElementById("submitBtn4").style.display = "block";
 
         Prompt.innerHTML = "You decide to talk to the figure. It tells you that it is a guardian of the staircase and that you must give it a gift to continue. Do you give it the Silver Ornamental Dagger or the Small Golden Mirror?";
+       
+        //return value of talkFigure
+        function talkFigure() {
+        return "Player chose to talk to the figure.";}
+        let message = talkFigure();
+        console.log(message);
+
       } else if (answer === "ignore") {
         document.getElementById("userInput3").style.display = "none";
         document.getElementById("submitBtn3").style.display = "none";
@@ -83,6 +97,12 @@
         document.getElementById("submitBtn5").style.display = "block";
 
         Prompt.innerHTML = "You decide to ignore the figure and continue on your way. As you walk past it, it suddenly grabs you and throws you down the stairs. You fall for what feels like an eternity before hitting the bottom. You are now trapped in a dark and eerie basement.";
+        
+        //return value of ignoreFigure
+        function ignoreFigure() {
+        return "Player chose to ignore the figure.";}
+        let message = ignoreFigure();
+        console.log(message);
       } 
       else {
         Prompt.innerHTML = "Invalid input. Please type 'talk' or 'ignore' to choose.";
@@ -93,6 +113,7 @@
     function choice4() {
       var answer = document.getElementById("userInput4").value;
       var Prompt = document.getElementById("storyPrompt");
+
       if (answer === "silver dagger") {
         document.getElementById("userInput4").style.display = "none";
         document.getElementById("submitBtn4").style.display = "none";
@@ -112,8 +133,18 @@
         Prompt.innerHTML = "Invalid input. Please type 'silver dagger' or 'golden mirror' to choose.";
       }
     }
+
+    //for loop
+    function forLoop() {
+      for (var i = 0; i < 1; i++) {
+        console.log("The story has been restarted.");
+      }
+    }
+
     //restart function
     function restart() {
+      forLoop();
+
         document.getElementById("userInput").style.display = "block";
         document.getElementById("submitBtn").style.display = "block";
 
@@ -133,8 +164,9 @@
         document.getElementById("userInput").value = "Type dagger or mirror here to choose..."; }
     
 
-      function choice5() { 
+      function choice5() {         
       var answer = document.getElementById("userInput5").value;
+
       if (answer === "restart") {
         restart();
       } 
@@ -145,7 +177,8 @@
 
   <body>
     <div class="Adventure">
-      <h1>Spiral Staircase</h1><br>
+      <h1 id="getTitle">Spiral Staircase</h1><br>
+      <h1 type="text" id="question"></h1>
 
 
               <img src="silver.jpg" id="Image" width="75px" height="75px">
