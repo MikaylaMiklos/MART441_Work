@@ -1,0 +1,73 @@
+body {
+    background-color: #cee6e7;
+    font-family: Arial, sans-serif;
+}
+
+H1 {
+    text-align: center;
+    color: #ceae1fe3;
+}
+
+.gameBoard {
+    display: flex;
+    width: fit-content; 
+    margin: 40px auto; 
+    border-spacing: 20px; 
+}
+
+.gameContainer {
+	display: table-row-group;
+    padding: 30px 0;
+}
+
+.card {
+    display: table-cell;
+    width: 100px;
+    height: 100px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(176, 190, 135);
+    background-color: rgb(235, 241, 209);
+}
+
+/* AI generated code, not used in final version -
+ used to see how to center my game board and cards, but I ended up
+ keeping my original code for the game board and cards, for the sake
+ of academic clarity and to avoid confusion.
+
+
+#gameBoard {
+    display: flex;
+    justify-content: center;  
+    margin-top: 40px;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+}
+
+
+#row1,
+#row2,
+#row3,
+#row4 {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;                 
+}
+
+
+.card {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(176, 190, 135);
+    background-color: rgb(235, 241, 209);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
