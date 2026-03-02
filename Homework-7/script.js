@@ -1,4 +1,4 @@
-//animals image names array
+///animals image names array
 var animals = [
     "card0","card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11"
 ];
@@ -14,6 +14,7 @@ var score = 0;
 var allFound = 0;
 
 var player = {"firstname":"", "lastname":"", "age":0, "score":0};
+var attempts = 0;
 
 //function to print blanks
 function printBlanksArray() {
@@ -42,37 +43,47 @@ function printImagesArray() {
 
 function flipCard(number)
 {
-    if (number === firstNumber) return;
+        if (number === firstNumber) return;
 
-    if (firstNumber >=0) {
-        secondNumber = number;
-        document.getElementById(animals[number]).src = animalImages[secondNumber];
-    }
+        if (firstNumber >=0) {
+            secondNumber = number;
+            document.getElementById(animals[number]).src = animalImages[secondNumber];
 
-    else if (firstNumber < 0) {
-        firstNumber = number;
-        document.getElementById(animals[firstNumber]).src = animalImages[firstNumber];
-    }
+            attempts++;
+        }
 
-    if(animalImages[secondNumber] != animalImages[firstNumber] && secondNumber >= 0)
-    {
+        else if (firstNumber < 0) {
+            firstNumber = number;
+            document.getElementById(animals[firstNumber]).src = animalImages[firstNumber];
+        }
+
+        if(animalImages[secondNumber] !== animalImages[firstNumber] && secondNumber >= 0)
+        {
+            setTimeout(imagesDisappear, 1000);
+        }
+        else if (animalImages[secondNumber] === animalImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
+        {
         score++;
-        setTimeout(imagesDisappear, 1000);
-    }
-    else if (animalImages[secondNumber] == animalImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
-    {
-    score++;
-    allFound++;
-    
-    firstNumber = -1;
-    secondNumber = -1;
+        allFound++;
+        
+        firstNumber = -1;
+        secondNumber = -1;
 
-    if (allFound == animalImages.length/2)
-    {
-        player.score = score;
-        localStorage.setItem("playerInfo", JSON.stringify(player));
-        window.location = "results.html";
-    }}}
+        if (allFound === animalImages.length/2)
+        {
+            playerInformation = localStorage.getItem("playerInfo");
+            var player = JSON.parse(playerInformation);
+            player.score = score;
+            player.attempts = attempts;
+            localStorage.setItem("playerInfo", JSON.stringify(player));
+            window.location = "results.html";
+        }
+    }
+
+
+    
+}
+
 
 
 function imagesDisappear()
@@ -104,9 +115,9 @@ function playerInfo() {
     player = JSON.parse(playerInformation);
 
     var str = "First Name: " + player.firstname + "<br>" + "Last Name: " + player.lastname + "<br>" +
-    "Age: " + player.age + "<br>" + "Score: " + player.score;
+    "Age: " + player.age + "<br>" + "Score: " + player.score + "<br>" + "Attempts: " + player.attempts;
 
-    if (document.getElementById("endResults") != null) {
+    if (document.getElementById("endResults") !== null) {
         document.getElementById("endResults").innerHTML = str;
     }
 }
