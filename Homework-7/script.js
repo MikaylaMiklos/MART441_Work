@@ -40,7 +40,7 @@ function printImagesArray() {
     }
 }
 
-/*function flipCard(number)
+function flipCard(number)
 {
     if (number === firstNumber) return;
 
@@ -72,57 +72,7 @@ function printImagesArray() {
         player.score = score;
         localStorage.setItem("playerInfo", JSON.stringify(player));
         window.location = "results.html";
-    }}}*/
-
-        function flipCard(number) {
-
-    // Prevent clicking the same card twice or clicking while two cards are up
-    if (number === firstNumber || (firstNumber >= 0 && secondNumber >= 0)) {
-        return;
-    }
-
-    // Flip the first card
-    if (firstNumber < 0) {
-        firstNumber = number;
-        document.getElementById(animals[firstNumber]).src = animalImages[firstNumber];
-        return;
-    }
-
-    // Flip the second card
-    secondNumber = number;
-    document.getElementById(animals[secondNumber]).src = animalImages[secondNumber];
-
-    // Now check for match
-    if (animalImages[firstNumber] === animalImages[secondNumber]) {
-
-        score++;
-        allFound++;
-
-        // Reset for next turn
-        firstNumber = -1;
-        secondNumber = -1;
-
-        // Check if game is finished
-        if (allFound === animalImages.length / 2) {
-            player.score = score;
-            localStorage.setItem("playerInfo", JSON.stringify(player));
-            window.location = "results.html";
-        }
-
-    } else {
-
-        score++;
-
-        // Hide cards after delay
-        setTimeout(function () {
-            document.getElementById(animals[firstNumber]).src = blank;
-            document.getElementById(animals[secondNumber]).src = blank;
-            firstNumber = -1;
-            secondNumber = -1;
-        }, 1000);
-    }
-}
-
+    }}}
 
 
 function imagesDisappear()
