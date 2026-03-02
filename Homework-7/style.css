@@ -1,0 +1,33 @@
+body {
+    background-color: #cee6e7;
+    font-family: Arial, sans-serif;
+}
+
+H1 {
+    text-align: center;
+    color: #ceae1fe3;
+}
+
+.gameBoard {
+    display: flex;
+    width: fit-content; 
+    margin: 40px auto; 
+    border-spacing: 20px; 
+}
+
+.gameContainer {
+	display: table-row-group;
+    padding: 30px 0;
+}
+
+.card {
+    display: table-cell;
+    width: 100px;
+    height: 100px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(176, 190, 135);
+    background-color: rgb(235, 241, 209);
+    gap : 10px;
+    cursor: pointer;
+}
