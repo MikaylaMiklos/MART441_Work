@@ -1,0 +1,25 @@
+#image {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: rgb(145, 156, 173);
+    font-family: Arial, sans-serif;
+    color: rgb(240, 240, 229);
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    color: rgb(223, 215, 199);
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(240, 240, 229);
+    color: rgb(161, 173, 184);
+    border: none;
+    padding: 10px 20px;
+    float: right;
+}

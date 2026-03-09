@@ -1,0 +1,1 @@
+I enjoyed the assignment this week and I feel like I understood the content fairly well! all links to the images and descriptions are linked in the script. 
