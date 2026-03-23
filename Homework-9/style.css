@@ -1,0 +1,74 @@
+#circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(192, 243, 239);
+    position: absolute;
+    left: 0;
+    top: 400;
+    border-radius: 50%;
+    opacity: 90%;
+    z-index: 10;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: rgb(192, 243, 239);
+    position: absolute;
+    left: 800px;
+    top: 400;
+    border-radius: 10%;
+    opacity: 90%;
+    transform: translateY(50px);
+    z-index: 10;
+    }
+
+#circle2 {
+    width: 100px;
+    height: 100px;
+    background: rgb(202, 250, 170);
+    position: absolute;
+    left: 350px;
+    top: 450;
+    border-radius: 50%;
+    opacity: 90%;
+    transform: translateY(300px);
+    z-index: 10;
+}
+
+
+
+p {
+    color: rgb(1, 64, 122);
+    font-size: 16x;
+}
+
+body {
+    background-color: rgb(126, 218, 241);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+#memory {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
+
+#text {
+    position: absolute;
+    top: 500px;
+    left: 20px;
+    z-index: 2;
+    color: rgb(1, 64, 122);
+}
+
+button  {
+    background-color: rgb(240, 240, 229);
+    color: rgb(161, 173, 184);
+    border: none;
+    padding: 10px 20px;
+    float: right;
+}
