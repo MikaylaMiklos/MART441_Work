@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(59, 48, 161);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+H1 {
+    text-align: center; 
+    color: rgb(238, 235, 255);
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(176, 162, 255);
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+}

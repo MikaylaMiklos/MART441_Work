@@ -1,0 +1,98 @@
+[
+    {
+      "name": "Aries",
+      "symbol": "♈",
+      "element": "Fire",
+      "quality": "Cardinal",
+      "ruling_planet": "Mars",
+      "dates": "March 21 - April 19"
+    },
+    {
+      "name": "Taurus",
+      "symbol": "♉",
+      "element": "Earth",
+      "quality": "Fixed",
+      "ruling_planet": "Venus",
+      "dates": "April 20 - May 20"
+    },
+    {
+      "name": "Gemini",
+      "symbol": "♊",
+      "element": "Air",
+      "quality": "Mutable",
+      "ruling_planet": "Mercury",
+      "dates": "May 21 - June 20"
+    },
+    {
+      "name": "Cancer",
+      "symbol": "♋",
+      "element": "Water",
+      "quality": "Cardinal",
+      "ruling_planet": "Moon",
+      "dates": "June 21 - July 22"
+    },
+    {
+      "name": "Leo",
+      "symbol": "♌",
+      "element": "Fire",
+      "quality": "Fixed",
+      "ruling_planet": "Sun",
+      "dates": "July 23 - August 22"
+    },
+    {
+      "name": "Virgo",
+      "symbol": "♍",
+      "element": "Earth",
+      "quality": "Mutable",
+      "ruling_planet": "Mercury",
+      "dates": "August 23 - September 22"
+    },
+    {
+      "name": "Libra",
+      "symbol": "♎",
+      "element": "Air",
+      "quality": "Cardinal",
+      "ruling_planet": "Venus",
+      "dates": "September 23 - October 22"
+    },
+    {
+      "name": "Scorpio",
+      "symbol": "♏",
+      "element": "Water",
+      "quality": "Fixed",
+      "ruling_planet": "Pluto",
+      "dates": "October 23 - November 21"
+    },
+    {
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "element": "Fire",
+      "quality": "Mutable",
+      "ruling_planet": "Jupiter",
+      "dates": "November 22 - December 21"
+    },
+    {
+      "name": "Capricorn",
+      "symbol": "♑",
+      "element": "Earth",
+      "quality": "Cardinal",
+      "ruling_planet": "Saturn",
+      "dates": "December 22 - January 19"
+    },
+    {
+      "name": "Aquarius",
+      "symbol": "♒",
+      "element": "Air",
+      "quality": "Fixed",
+      "ruling_planet": "Uranus",
+      "dates": "January 20 - February 18"
+    },
+    {
+      "name": "Pisces",
+      "symbol": "♓",
+      "element": "Water",
+      "quality": "Mutable",
+      "ruling_planet": "Neptune",
+      "dates": "February 19 - March 20"
+    }
+  ]
