@@ -1,0 +1,27 @@
+body{
+  background-color: rgb(41, 133, 61);
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  color: rgb(148, 240, 106);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+audio{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#myCanvas{
+  background-color: rgb(106, 240, 124);
+  border:rgb(15, 85, 73);
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
