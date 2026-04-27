@@ -16,7 +16,7 @@ Describe the intention behind your scene. What were you trying to create visuall
 The intention behind my scene was predominantly experimentation with some visual direction. First thing I wanted to test was to see if I could export an object from blender I made and use it in this project. Which it did work! However, my visual direction took a different path than the intention behind my 3D model. I wanted to visually create a scene that took inspiration from the Frutiger Aero aesthetic with the 3D model being the focus. Frutiger Aero relies heavily on the colors bright blue, greens, and whites. I intended the shapes included in my scene to mimic the bubbles and clouds commonly featured in the aesthetic as well. The line is meant to represent the ground and greens, I think I could have pushed this more with a plane however.
 
 
-Growth & Iteration
+<H2>Growth & Iteration</H2>
 If you had more time, what would you improve or add next? What part of Three.js are you most interested in exploring further? 
 
 I think if I had more time I'd really like to push this scene and try and create a more dynamic background. I envision it looking more like a stage and having objects/shapes for the 3D model in the center. I would also probably swap my 3D model out for something else more in the same direction as the aesthetic, I was just really excited to use my model in this project. I am mostly interested in creating artistic pieces with three.js I think it could be really fun for me.
