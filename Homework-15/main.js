@@ -103,7 +103,7 @@ var controls = getControls(camera, renderer);
 
 
 /**
- * make 2+ objects (and animate them).
+ * make 2+ objects.
  **/
 
 //spheres
@@ -146,13 +146,6 @@ const cube = new THREE.Mesh(geometry, cubeMaterial);
 cube.position.set(1.2, -1, 7.5);
 scene.add(cube);
 
-function animate() {
-    requestAnimationFrame( animate );
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    controls.update();
-    renderer.render( scene, camera );
-}
 
 
 /**
@@ -183,6 +176,13 @@ function render() {
   controls.update();
 }*/
 
+function animate() {
+    requestAnimationFrame( animate );
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    controls.update();
+    renderer.render( scene, camera );
+}
 
 
 loadModel();
