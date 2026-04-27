@@ -21,4 +21,4 @@ If you had more time, what would you improve or add next? What part of Three.js 
 
 I think if I had more time I'd really like to push this scene and try and create a more dynamic background. I envision it looking more like a stage and having objects/shapes for the 3D model in the center. I would also probably swap my 3D model out for something else more in the same direction as the aesthetic, I was just really excited to use my model in this project. I am mostly interested in creating artistic pieces with three.js I think it could be really fun for me.
 
-check-in: I had fun this week with three.js and I was happy that I could us one of my blender sculpts in another project!
+<B>check-in:</B> I had fun this week with three.js and I was happy that I could us one of my blender sculpts in another project!
